@@ -1,0 +1,5 @@
+aws_region    = "ap-south-1"
+instance_type = "t3.micro"
+key_name      = "sunil"
+ami_id        = "ami-035827357e3c7e810"
+project_name  = "MyFirstTerraformEC2"
