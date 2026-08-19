@@ -1,0 +1,38 @@
+name: Environments
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+   runs-on: ubuntu-latest
+   steps:
+      - name: Deploy
+        run: |
+          echo "Test deployment"
+          echo"USERNAME =${{vars.USERNAME}}"
+  Dev:
+    runs-on: ubuntu-latest
+    environment: Dev
+    steps:
+      - name: Deploy
+        run:
+              echo "Deployed to DEV"
+              echo"USERNAME =${{vars.USERNAME}}"
+
+  STAGE:
+    runs-on: ubuntu-latest
+    environment: Stage
+    steps:
+      - name: Deploy
+        run:
+           echo "Deployed to Stage"
+           echo"USERNAME =${{vars.USERNAME}}"
+  PROD:
+    runs-on: ubuntu-latest
+    environment: Prod
+    steps:
+      - name: Deploy
+        run: 
+          echo "Deployed to PROD"
+          echo"USERNAME =${{vars.USERNAME}}"
